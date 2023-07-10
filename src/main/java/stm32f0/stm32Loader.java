@@ -370,6 +370,10 @@ public class stm32Loader extends AbstractLibrarySupportLoader {
 			new STM32MemRegion("TIM7",0x40001400,0x3FF,true,true,false),
 			new STM32MemRegion("TIM14",0x40002000,0x3FF,true,true,false),
 
+            // M0 Private Peripheral Bus
+            // see 2.2 and 4.1: https://www.st.com/resource/en/programming_manual/pm0223-stm32-cortexm0-mcus-programming-manual-stmicroelectronics.pdf
+			new STM32MemRegion("PPB",0xE0000000,0xFFFFF,true,true,false),
+
 			new STM32MemRegion("System Memory",0x1FFFD800 ,0x1FFF,true,true,true),
 			// TODO: Add the ability to select and load these in from the loader...
 			new STM32MemRegion("Option Bytes",0x1FFFC000 ,0x3FF,true,false,false),
